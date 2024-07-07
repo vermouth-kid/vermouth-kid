@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>类似哔哩哔哩的首页</title>
+  <link rel="stylesheet" href=".CSS\首页.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      background-color: #4CAF50;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    nav ul li {
+      float: left;
+    }
+
+    nav ul li.right-links {  
+      position: absolute;  
+      right: 0;  
+    }
+
+    nav ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 16px; 
+    }
+
+    nav ul li.right-links a { 
+      font-size: 14px;  
+    }
+
+    nav ul li a:hover {
+      background-color: #111;
+    }
+
+    nav ul li a#homeLink:hover,
+    nav ul li a#homeLink:active, 
+    nav ul li a#mathLink:hover,
+    nav ul li a#mathLink:active, 
+    nav ul li a#englishLink:hover,
+    nav ul li a#englishLink:active, 
+    nav ul li a#physicsLink:hover,
+    nav ul li a#physicsLink:active,  
+    nav ul li a#chemistryLink:hover,
+    nav ul li a#chemistryLink:active, 
+    nav ul li a#biologyLink:hover,
+    nav ul li a#biologyLink:active,  
+    nav ul li a#myLink:hover,
+    nav ul li a#myLink:active {  
+      font-size: 24px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+.video-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+.video-card {
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+.video-card img {
+      width: 100%;
+    }
+
+.video-card h3 {
+      margin-top: 10px;
+    }
+
+.video-card p {
+      margin-top: 5px;
+    }
+
+.search-box {
+      width: 50%;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+.search-box input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+.search-box button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-decoration: none;
+    }
+
+    #banner {
+      width: 800px;
+      height: 400px;
+      overflow: hidden;
+      border: 2px solid #999;
+      position: relative;
+      margin: 0 auto; 
+    }
+
+    #banner img {
+      width: 800px;
+      height: 400px;
+    }
+
+    #imglist {
+      width: 4000px;
+      height: 400px;
+    }
+
+    #imglist li {
+      float: left;
+    }
+
+    #icolist {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+
+    #icolist li {
+      float: left;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #666;
+      color: #fff;
+      margin-left: 5px;
+      text-align: center;
+      line-height: 30px;
+      cursor: pointer;
+    }
+
+.prev {
+      background: #666;
+      height: 40px;
+      width: 30px;
+      position: absolute;
+      left: 5px;
+      top: 45%;
+      color: #fff;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+.next {
+      background: #666;
+      height: 40px;
+      width: 30px;
+      position: absolute;
+      right: 5px;
+      top: 45%;
+      color: #fff;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    nav ul li.right-links img { 
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body id="homePage">
+  <header>
+    <h1>类似 B 站的首页</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html" id="homeLink">首页</a></li>
+      <li><a href="math.html" id="mathLink">数学</a></li>
+      <li><a href="english.html" id="englishLink">英语</a></li>
+      <li><a href="physics.html" id="physicsLink">物理</a></li>
+      <li><a href="chemistry.html" id="chemistryLink">化学</a></li>
+      <li><a href="biology.html" id="biologyLink">生物</a></li>
+      <li><a href="login.html">登录</a></li>  <!-- 只有登录链接 -->
+      <li class="right-links"><a href="my.html"><img src="your_my_image.jpg" alt="我的"></a></li> 
+  </nav>
+  <div class="search-box">
+    <input type="text" placeholder="搜索课程...">
+    <button>搜索</button>
+  </div>
+  <div id="banner">
+    <ul id="imglist">
+      <li><a href=""><img src="./image/1.jpg" alt=""></a></li>
+      <li><a href=""><img src="img/pic2.jpeg" alt=""></a></li>
+      <li><a href=""><img src="img/pic3.jpeg" alt=""></a></li>
+      <li><a href=""><img src="img/pic4.jpeg" alt=""></a></li>
+      <li><a href=""><img src="img/pic1.jpeg" alt=""></a></li>
+    </ul>
+    <ul id="icolist">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+    <div class="prev">《</div>
+    <div class="next">》</div>
+  </div>
+  <main>
+    <h2>热门课程推荐</h2>
+    <div class="video-section">
+      <div class="video-card">
+        <a href="C:\Users\26757\Desktop\ZT\video\【建议收藏】考研数学武忠祥 高等数学0基础课 - 3.01.函数与极限第一节  映射与函数 02(Av330107670,P3).mp4"><img src="./image/【建议收藏】考研数学武忠祥 高等数学0基础课.jpg" alt="数学课程"></a>
+        <h3><a href="C:\Users\26757\Desktop\ZT\video\【建议收藏】考研数学武忠祥 高等数学0基础课 - 3.01.函数与极限第一节  映射与函数 02(Av330107670,P3).mp4">高等数学基础讲解</a></h3>
+        <p>作者：[武忠祥教授]</p>
+        <p>播放量：[1482.2W]</p>
+      </div>
+      <div class="video-card">
+        <a href="C:\Users\26757\Desktop\ZT\video\【YouTube最好的英语训练课程】1个月提升口语听力n个level (63集完整版) - 3.36句英语常用表达_-_高效提升您的英语听力技能(Av243360202,P3).mp4"><img src="./image/【YouTube最好的英语训练课程】1个月提升口语听力n个level (63集完整版).jpg" alt="英语课程"></a>
+        <h3><a href="C:\Users\26757\Desktop\ZT\video\【YouTube最好的英语训练课程】1个月提升口语听力n个level (63集完整版) - 3.36句英语常用表达_-_高效提升您的英语听力技能(Av243360202,P3).mp4">英语口语提升秘籍</a></h3>
+        <p>作者：[YouTube口语精选]</p>
+        <p>播放量：[830.9W]</p>
+      </div>
+      <div class="video-card">
+        <a href="C:\Users\26757\Desktop\ZT\video\【高中物理】【一轮复习】【合集】2.平衡力学(已完结) - 3.3.【讲义21】摩擦力(Av711652399,P3).mp4"><img src="./image/【高中物理】【一轮复习】【合集】2.平衡力学(已完结).jpg" alt="物理课程"></a>
+        <h3><a href="C:\Users\26757\Desktop\ZT\video\【高中物理】【一轮复习】【合集】2.平衡力学(已完结) - 3.3.【讲义21】摩擦力(Av711652399,P3).mp4">高中物理力学专题</a></h3>
+        <p>作者：[HuangFuRen]</p>
+        <p>播放量：[770.7W]</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    &copy; 2024 我的网站 版权所有
+  </footer>
+
+  <script>
+    var esico = document.getElementById('icolist').getElementsByTagName('li');
+    var eicolist = document.querySelector('#icolist');
+    var eimglist = document.querySelector('#imglist');
+    var etest = document.querySelector('#test');
+    var eprev = document.querySelector('.prev');
+    var enext = document.querySelector('.next');
+    var left = 0;
+    var timer;
+
+    esico[2].style.backgroundColor = 'ed';
+
+    run();
+
+    // alert(Math.floor(3190/800));
+
+    function run() {
+      if (left <= -3200) {
+        left = 0;
+      }
+
+      var m = Math.floor(-left / 800);
+      imglist.style.marginLeft = left + 'px';
+      var n = (left % 800 == 0)? n = 1200 : n = 6;
+      left -= 10;
+      icochange(m);
+      timer = setTimeout(run, n);
+    }
+
+    function icochange(m) {
+      for (let index = 0; index < esico.length; index++) {
+        esico[index].style.backgroundColor = '';
+      }
+
+      if (m < esico.length) {
+        esico[m].style.backgroundColor = 'ed';
+      }
+    }
+
+    function imgchange(n) {
+      let lt = - (n * 800)
+      imglist.style.marginLeft = lt + 'px';
+      left = lt;
+    }
+
+    eprev.onclick = function() {
+      let prevgo = Math.floor(-left / 800) - 1;
+      if (prevgo == -1) {
+        prevgo = 3;
+      }
+      imgchange(prevgo);
+      icochange(prevgo);
+    }
+
+    enext.onclick = function() {
+      let nextgo = Math.floor(-left / 800) + 1;
+      if (nextgo == 4) {
+        nextgo = 0;
+      }
+      imgchange(nextgo);
+      icochange(nextgo);
+    }
+
+    eicolist.onclick = function() {
+      var tg = event.target;
+      let ico = tg.innerHTML - 1;
+      imgchange(ico);
+      icochange(ico);
+    }
+
+    eimglist.onmouseover = function() {
+      clearTimeout(timer);
+    }
+
+    eimglist.onmouseout = function() {
+      run();
+    }
+  </script>
+</body>
+
+</html>

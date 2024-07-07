@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数学页面</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      background-image: url('https://img.zcool.cn/community/0119d95da98990a8012163ba589d72.jpg@2o.jpg');  
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">返回首页</a>
+  </header>
+
+  <h1>数学课程</h1>
+
+  <div class="video-container">
+    <div class="video-row">
+      <div class="video-item">
+        <video controls>
+          <source src="./video/《高等数学》同济版 2024年更新_宋浩老师 - 7.1.2 数列极限的定义(Av48624233,P7).mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <div class="video-info">
+          <p>数列极限的定义</p>
+          <p>播放量：1.6亿</p>
+          <p>点赞数：265.8W</p>
+        </div>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./video/《高等数学》同济版 2024年更新_宋浩老师 - 8.1.2 收敛数列的性质(Av48624233,P8).mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <div class="video-info">
+          <p>收敛数列的性质</p>
+          <p>播放量：1.6亿</p>
+          <p>点赞数：407.W</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-row">
+      <div class="video-item">
+        <video controls>
+          <source src="./video/《高等数学》同济版 2024年更新_宋浩老师 - 9.反三角函数介绍(Av48624233,P9).mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <div class="video-info">
+          <p>反三角函数介绍</p>
+          <p>播放量：1.6亿</p>
+          <p>点赞数：716.W</p>
+        </div>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./video/《高等数学》同济版 2024年更新_宋浩老师 - 9.反三角函数介绍(Av48624233,P9).mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <div class="video-info">
+          <p>反三角函数介绍</p>
+          <p>播放量：1.6亿</p>
+          <p>点赞数：357.5W</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let videos = document.getElementsByTagName('video');
+    for (let video of videos) {
+      video.addEventListener('timeupdate', function () {
+        let duration = Math.floor(video.currentTime / 60); 
+        let pElement = this.nextElementSibling.nextElementSibling;
+        pElement.innerHTML = `已学习时长：${duration} 分钟`;
+      });
+    }
+  </script>
+</body>
+
+</html>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header a {
+    color: white;
+    text-decoration: none;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+.video-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+.video-item {
+    flex-basis: 48%;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  video {
+    width: 100%;
+  }
+
+.video-info {
+    padding-top: 10px;
+  }
+</style>https://qvxf1zpd-1414.inc1.devtunnels.ms/

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            background-image: url('https://img.zcool.cn/community/011d7e5d22b575a801213763a8a61a.jpg?imageMogr2/auto-orient/thumbnail/1280x%3e/sharpen/0.5/quality/100/format/webp'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            width: 305px;
+            padding: 40px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            background-color: transparent;
+            position: relative;
+        }
+
+        form h2 {
+            text-align: center;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+        }
+
+        form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+      .register-link a, 
+      .return-link a {
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form action="login_process.jsp" method="post">
+        <h2>用户登录</h2>
+        <label for="username">用户名：</label><br>
+        <input type="text" id="username"><br>
+        <label for="password">密码：</label><br>
+        <input type="password" id="password"><br><br>
+        <input type="submit" value="登录">
+        <div class="register-link">
+            <a href="register.html">注册</a>
+        </div>
+        <div class="return-link">
+            <a href="index.html">返回首页</a>
+        </div>
+    </form>
+</body>
+
+</html>

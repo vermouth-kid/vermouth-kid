@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英语页面</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      background-image: url('https://img.tukuppt.com/ad_preview/00/71/67/60818162f06c7.jpg!/fw/980');  
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">返回首页</a>
+  </header>
+
+  <h1>英语课程</h1>
+
+  <div class="video-container">
+    <div class="video-row">
+      <div class="video-item">
+        <video controls>
+          <source src="./video/【更新版】大学英语四级六级考试零基础备考完整精讲真题课程_对啊网（背单词词汇&听力&阅读理解&翻译& - 64.03高频考点-时态(Av43421290,P64).mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <div class="video-info">
+          <p>高频考点-时态</p>
+          <p>播放量：746.7W</p>
+          <p>点赞数：62.5W</p>
+        </div>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./video/【更新版】大学英语四级六级考试零基础备考完整精讲真题课程_对啊网（背单词词汇&听力&阅读理解&翻译& - 65.04高频考点-被动语态(Av43421290,P65).mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <div class="video-info">
+          <p>高频考点-被动语态</p>
+          <p>播放量：746.7W</p>
+          <p>点赞数：40.8W</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-row">
+      <div class="video-item">
+        <video controls>
+          <source src="./video/【更新版】大学英语四级六级考试零基础备考完整精讲真题课程_对啊网（背单词词汇&听力&阅读理解&翻译& - 66.05高频考点-逻辑关系(Av43421290,P66).mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <div class="video-info">
+          <p>高频考点-逻辑关系</p>
+          <p>播放量：746.7W</p>
+          <p>点赞数：77.2W</p>
+        </div>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./video/【更新版】大学英语四级六级考试零基础备考完整精讲真题课程_对啊网（背单词词汇&听力&阅读理解&翻译& - 67.06高频考点-复合句式(Av43421290,P67).mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <div class="video-info">
+          <p>高频考点-复合句式</p>
+          <p>播放量：746.7W</p>
+          <p>点赞数：35.4W</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let videos = document.getElementsByTagName('video');
+    for (let video of videos) {
+      video.addEventListener('timeupdate', function () {
+        let duration = Math.floor(video.currentTime / 60);  
+        let pElement = this.nextElementSibling.nextElementSibling;
+        pElement.innerHTML = `已学习时长：${duration} 分钟`;
+      });
+    }
+  </script>
+</body>
+
+</html>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header a {
+    color: white;
+    text-decoration: none;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+.video-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+.video-item {
+    flex-basis: 48%;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  video {
+    width: 100%;
+  }
+
+.video-info {
+    padding-top: 10px;
+  }
+</style>

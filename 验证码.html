@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+.main{
+margin: auto;
+width: 160px;
+}
+.gcode{
+width: 100%;
+height: 40px;
+background: url(bjt.png);
+background-size: 100%;
+/* 字要水平垂直居中 */
+text-align: center;
+line-height: 40px;
+font-size: 16pt;
+/* 这里是字的间距 */
+letter-spacing: 10px;
+/* 字体为斜体 */
+font-style: italic;
+/* 鼠标悬停时变小手 */
+cursor: pointer;
+user-select: none;
+}
+#inp{
+width: 100%;
+box-sizing: border-box;/* 这个是去掉内边距和边框对盒子大小的影响 */
+}
+#cbt{
+width: 100%;
+}
+</style>
+</head>
+<body>
+<!-- 我们先创建各种元素吧 -->
+<div class="main">
+<div class="gcode"></div>
+<input type="text" id="inp">
+<button id="cbt">验证</button>
+<div class="msg"></div>
+</div>
+<script>
+// 先取得所有元素
+var ecbt = document.querySelector('#cbt');
+var egcode = document.querySelector('.gcode');
+var einp = document.querySelector('#inp');
+var emsg = document.querySelector('.msg');
+// 生成验证码函数，生成五位随机数字或小写字母
+var getcode = function(){
+// Math.random()生成0~1的随机数，小数位在16或17位
+// toString(36)转到36进制，因为36进制会包含所有的小数和小写字母
+// substr(3,5)截取字符串，从第3位起，往后取5位。前两位是0.所以只从第3位起
+var code = Math.random().toString(36).substr(3,5);
+// 最后函数返回验证码
+return code;
+}
+// 测试一下点击事件
+ecbt.onclick = function(){
+//    这里做个判断吧
+//  加这个是为了去掉输入框前后可能出现的空格
+if(egcode.innerHTML == (einp.value).trim()){
+emsg.innerHTML = '通过验证';
+} else{
+emsg.innerHTML = '未通过验证';
+}
+}
+// 忘记了，点击验证码框一次就更换一次验证码
+egcode.onclick  = function(){
+egcode.innerHTML = getcode();
+}
+// 网页载入的时候 就出验证码了
+egcode.click();
+</script>
+</body>
+</html>

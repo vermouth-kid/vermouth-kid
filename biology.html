@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生物页面</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      background-image: url('https://img.zcool.cn/community/01712658c032e5a801219c7731ecf5.jpg@3000w_1l_0o_100sh.jpg');  
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">返回首页</a>
+  </header>
+
+  <h1>生物课程</h1>
+
+  <div class="video-container">
+    <div class="video-row">
+      <div class="video-item">
+        <video controls>
+          <source src="./video/高中生物必修一（新人教版）视频合集 杨波生物 - 9.P9 细胞中的无机物(Av847074170,P9).mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <div class="video-info">
+          <p>细胞中的无机物</p>
+          <p>播放量：741.8W</p>
+          <p>点赞数：17.5W</p>
+        </div>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./video/高中生物必修一（新人教版）视频合集 杨波生物 - 15.P15 蛋白质相关计算(Av847074170,P15).mp4").mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <div class="video-info">
+          <p>蛋白质相关计算</p>
+          <p>播放量：741.8W</p>
+          <p>点赞数：21.1W</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-row">
+      <div class="video-item">
+        <video controls>
+          <source src="./video/高中生物必修一（新人教版）视频合集 杨波生物 - 3.P3 细胞的多样性和统一性(1)(Av847074170,P3).mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <div class="video-info">
+          <p>细胞的多样性和统一性</p>
+          <p>播放量：741.8W</p>
+          <p>点赞数：26.9W</p>
+        </div>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./video/高中生物必修一（新人教版）视频合集 杨波生物 - 21.P21 细胞器之间的分工合作(1)(Av847074170,P21).mp4").mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <div class="video-info">
+          <p>细胞器之间的分工合作(1)</p>
+          <p>播放量：741.8W</p>
+          <p>点赞数：18.9W</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    let videos = document.getElementsByTagName('video');
+    for (let video of videos) {
+      video.addEventListener('timeupdate', function () {
+        let duration = Math.floor(video.currentTime / 60);  
+        let pElement = this.nextElementSibling.nextElementSibling;
+        pElement.innerHTML = `已学习时长：${duration} 分钟`;
+      });
+    }
+  </script>
+</body>
+
+</html>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header a {
+    color: white;
+    text-decoration: none;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+.video-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+.video-item {
+    flex-basis: 48%;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  video {
+    width: 100%;
+  }
+
+.video-info {
+    padding-top: 10px;
+  }
+</style>
